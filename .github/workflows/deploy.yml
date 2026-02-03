@@ -21,15 +21,3 @@ jobs:
           command: deploy --name ${{ secrets.WORKER_NAME }}
           wranglerVersion: '4.62.0'
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          secrets: |
-            AI_GATEWAY_API_KEY
-            AI_GATEWAY_BASE_URL
-            MOLTBOT_GATEWAY_TOKEN
-            CF_ACCESS_TEAM_DOMAIN
-            CF_ACCESS_AUD
-        env:
-          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_BASE_URL }}
-          AI_GATEWAY_BASE_URL: ${{ secrets.AI_GATEWAY_BASE_URL }}
-          MOLTBOT_GATEWAY_TOKEN: ${{ secrets.MOLTBOT_GATEWAY_TOKEN }}
-          CF_ACCESS_TEAM_DOMAIN: ${{ secrets.CF_ACCESS_TEAM_DOMAIN }}
-          CF_ACCESS_AUD: ${{ secrets.CF_ACCESS_AUD }}
